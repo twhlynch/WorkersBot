@@ -82,3 +82,9 @@ kv_namespaces = [
 Run the `update_commands.yml` and `publish.yml` GitHub Actions workflows to update the commands and publish the worker.
 
 Restart Discord and try one of the example commands in `commands.js`.
+
+## Modifying the commands
+
+Edit `commands.js` to add, remove, or modify commands, and `worker.js` to change how they respond. If you change command logic but keep the definitions the same, you won't have to run the `update_commands.yml` workflow, but otherwise you will need to. After editing, run `publish.yml` to update the worker, and restart Discord.
+
+You will need to refer to the [Discord API documentation](https://discord.com/developers/docs/interactions/application-commands) to understand how to structure the commands and their logic.
