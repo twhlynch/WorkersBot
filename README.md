@@ -28,7 +28,7 @@ Go to https://dash.cloudflare.com/ and click `Workers & Pages` in the left menu.
 
 Copy `Account ID` from the right and save it for later.
 
-Click `Create application`, `Create Worker`, name it "WorkersBot" (or change that and change it in wrangler.toml as well), and then `Deploy`.
+Click `Create application`, `Create Worker`, name it "workers-bot" (or change that and change it in wrangler.toml as well), and then `Deploy`.
 
 Go to https://dash.cloudflare.com/profile and click `API Tokens`.
 
@@ -42,7 +42,7 @@ Click `Continue To Summary`, `Create Token`, and `Copy`. (Save this for later).
 
 ### Configure Secrets
 
-Add the following secrets to your GitHub repository in Settings -> Secrets.
+Add the following secrets to your GitHub repository in Settings -> Secrets and variables -> Actions -> New repository secret.
 - **DISCORD_TOKEN**
 
 > Looks something like `MT2zNlAxNjU3NDcMNvM7MjE3Np.Pb4bw4.4sWqupEfAQ8TrxiDhUu5NDdcVCGghWQZ_fAFsX`
@@ -80,6 +80,8 @@ kv_namespaces = [
 ## Usage
 
 Run the `update_commands.yml` and `publish.yml` GitHub Actions workflows to update the commands and publish the worker.
+
+On https://discord.com/developers/applications/ Open your bot, open the left menu and click `General Information`. Find INTERACTIONS ENDPOINT URL and set it to `https://workers-bot.your-username.workers.dev` (change your-username to your cloudflare username).
 
 Restart Discord and try one of the example commands in `commands.js`.
 

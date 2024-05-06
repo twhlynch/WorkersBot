@@ -1,4 +1,4 @@
-name = "WorkersBot"
+name = "workers-bot"
 main = "./worker.js"
 compatibility_date="2023-05-18"
 compatibility_flags = [ "nodejs_compat" ]
